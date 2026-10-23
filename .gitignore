@@ -1,0 +1,42 @@
+# Personal configuration and credentials
+config*.json
+!config.example.json
+*.local.*
+.env
+.env.*
+!.env.example
+*keys_cache*
+*found_keys*
+*.key
+*.pem
+.wechat-toolkit/
+.codex/
+.claude/
+
+# Conversation data and local reports, even when copied to the repository root
+outputs/
+output/
+data/
+state/
+private/
+*.db
+*.db-*
+*.sqlite*
+*.log
+messages*.json
+messages*.txt
+metadata.json
+line-index.json
+cli-scoped.txt
+analysis.md
+report.md
+
+# Local environments and editor files
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.idea/
+.vscode/
+dist/
+build/

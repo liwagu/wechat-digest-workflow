@@ -1,0 +1,8 @@
+{
+  "group_name": "<唯一匹配的目标群名>",
+  "group_id": "<群的数字ID>@chatroom",
+  "timezone": "Asia/Shanghai",
+  "wechat_cli": "~/bin/wechat",
+  "toolkit_src": "~/tools/wechat-toolkit/src",
+  "output_root": "~/.local/share/wechat-digest-workflow"
+}
