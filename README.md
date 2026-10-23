@@ -1,10 +1,18 @@
-# WeChat Digest Workflow
+# 提取群聊干货并定点汇报
 
-**用 Codex 定时任务、本机 WeChat CLI 和 Python 提取脚本，把指定微信群的讨论整理成有出处的日报。**
+**自动提取微信群里的实用信息，按你设定的时间汇报，并附上消息出处。**
 
-适合消息量大、需要持续关注某些议题的群聊。你定义关注点，例如技术讨论、招聘活动、明确求助或项目进展；脚本准备消息证据，Codex 阅读并整理。
+WeChat Digest Workflow 将 Codex 定时任务、本机 WeChat CLI 和 Python 提取脚本串起来。适合消息量大、需要持续关注某些议题的群聊：你定义技术分享、实用资源、活动、明确求助或项目进展等关注点，设置汇报时间，Codex 定期整理干货。
 
-仓库公开技术架构、通用代码、使用步骤和提示词模板。没有真实群聊、成员名单、日报实例、截图、账号配置或密钥。测试内容全部虚构。
+## 效果展示
+
+左侧设置定时任务，中间收到群聊精选摘要，右侧查看完整报告。
+
+![Codex 定时提取群聊干货并汇报的实际使用截图](docs/images/workflow-demo.png)
+
+*实际使用截图，使用维护者授权公开的原图。*
+
+仓库提供技术架构、通用代码、使用步骤和提示词模板。除上述授权截图外，不发布原始群聊导出、日报文件、个人运行配置或密钥。测试内容全部虚构。
 
 ## 一张图理解整个流程
 
@@ -117,7 +125,7 @@ Codex 会运行提取脚本、检查覆盖范围、读取消息文件、写出 `
 
 ## 输出文件的用途
 
-这里仅描述文件结构，不提供真实输出样本。
+下表说明生成文件的用途；仓库不提供原始消息导出或可下载的日报文件。
 
 | 文件 | 内容及用途 |
 | --- | --- |
@@ -150,11 +158,11 @@ python3 scripts/check_public.py
 
 测试只使用代码里构造的虚拟消息和临时目录，不读取微信。集成测试用虚拟 CLI / Toolkit 验证提取链路，不能代替你本机的真实兼容性验证。
 
-发布检查只检查 Git 暂存区/已跟踪文件，并拒绝非白名单文件和部分常见私人标识；它不保证检测所有敏感信息，公开前仍需审阅提交。默认输出位于仓库外，忽略规则是第二层保护。
+发布检查只检查 Git 暂存区/已跟踪文件，并拒绝非白名单文件和部分常见私人标识；它不识别图片中的文字，也不保证检测所有敏感信息，公开前仍需审阅提交。效果截图已单独授权加入白名单。默认输出位于仓库外，忽略规则是第二层保护。
 
 ## English overview
 
-A local WeChat-to-Codex digest workflow: a configurable Python extractor reads a bounded group conversation through an existing macOS WeChat Toolkit installation, restores compressed messages and quoted replies, checks record counts, and writes private evidence files. Codex analyzes those files and delivers a scheduled digest. This repository contains architecture, reusable code, setup instructions and a scheduling prompt—no real conversations or reports.
+A local WeChat-to-Codex digest workflow: a configurable Python extractor reads a bounded group conversation through an existing macOS WeChat Toolkit installation, restores compressed messages and quoted replies, checks record counts, and writes private evidence files. Codex extracts useful information and delivers it on your schedule. This repository contains architecture, reusable code, setup instructions, a scheduling prompt, and an explicitly authorized original screenshot. Raw conversation exports, report files, personal configuration and credentials are not included.
 
 ## License
 

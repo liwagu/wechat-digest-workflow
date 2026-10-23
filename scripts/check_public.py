@@ -12,6 +12,7 @@ PUBLIC_FILES = {
     "docs/architecture.md", "docs/privacy.md", "docs/dependencies.md",
     "prompts/daily-digest.md", "scripts/extract.py", "scripts/check_public.py",
     "tests/test_extract.py", ".github/workflows/checks.yml",
+    "docs/images/workflow-demo.png",  # Original screenshot explicitly approved for publication.
 }
 RULES = {
     "personal macOS path": rb"/Users/[A-Za-z0-9_.-]+/",
